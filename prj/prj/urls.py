@@ -16,10 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app1.views import HomePageView
+from app1.views import HomePageView, AddItemPageView, RegisterUser, LoginUser, logout_user, ShowItemPage, MyPage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomePageView.as_view(), name='home')
+    path('', HomePageView.as_view(), name='home'),
+    path('add_item/', AddItemPageView.as_view(), name='Add_an_advert'),
+    path('register/', RegisterUser.as_view(), name='register'),
+    path('login/', LoginUser.as_view(), name='login'),
+    path('logout/', logout_user, name='logout'),
+    path('item/<slug:item_slug>/', ShowItemPage.as_view(), name='item'),
+    path('user/<int:user_id>/', MyPage.as_view(), name='my_page'),
 
 ]
