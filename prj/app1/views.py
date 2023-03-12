@@ -57,7 +57,7 @@ class MyPage(DetailView):
     template_name = 'my_page.html'
     pk_url_kwarg = 'user_id'
     context_object_name = 'user'
-    k = Item.objects.filter(owner=User.username)
+    # k = Item.objects.filter(owner=User.username)
     # user_items = Item.objects.get(owner=User.id)
     # id = User.pk
     # def get(self, request, user_id):

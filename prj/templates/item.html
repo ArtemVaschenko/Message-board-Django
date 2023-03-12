@@ -1,11 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<style>img {
+  float: left;
+  border: 10px solid white;
+}</style>
 <h1>{{ item.name }}</h1>
-<img src="/{{ item.item_img }}" class="card-img" alt="photo {{ item.name }}">
-<p class="text-body">{{ item.description }}</p>
+<img src="/{{ item.item_img }}" width="310" height="430" alt="photo {{ item.name }}">
+<div class="right">
+    <h3>{{ item.price }} grn.</h3>
+    <p>Contact: {{ item.contact }}</p>
+    <p class="text-body"> Description:
+        {{ item.description }}</p>
 
 
-<h6>{{ item.owner }}</h6>
-<h6>{{ item.owner.email }}</h6>
+    <h6>Owner: {{ item.owner }}</h6>
+    <h6>{{ item.owner.email }}</h6>
+</div>
 {% endblock %}

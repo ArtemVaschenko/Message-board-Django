@@ -2,18 +2,19 @@
 
 {% block content %}
 <h2>{{ user.username }}</h2>
-<p>{{ user.email }}</p>
-{% for i in k %}
-<div class="d-flex">
-    <div class="card" style="width: 18rem;">
-        <img src="{{ i.item_img }}" class="card-img-top" alt="">
-        <div class="card-body">
-            <h5 class="card-title">{{ i.name }}</h5>
-            <p class="card-text">{{ i.description }}</p>
-<!--            <a href="{{ i.get_absolute_url }}" class="btn btn-primary">more info</a>-->
-        </div>
-    </div>
-</div>
+
+<!--<p>{{ user.email }}</p>-->
+<!--{% for i in k %}-->
+<!--<div class="d-flex">-->
+<!--    <div class="card" style="width: 18rem;">-->
+<!--        <img src="{{ i.item_img }}" class="card-img-top" alt="">-->
+<!--        <div class="card-body">-->
+<!--            <h5 class="card-title">{{ i.name }}</h5>-->
+<!--            <p class="card-text">{{ i.description }}</p>-->
+<!--&lt;!&ndash;            <a href="{{ i.get_absolute_url }}" class="btn btn-primary">more info</a>&ndash;&gt;-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 {% endfor %}
 
 {% endblock %}
